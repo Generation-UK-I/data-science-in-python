@@ -169,14 +169,34 @@ print('2nd element on 1st row: ', my_array[0, 1])
 
 **Three Dimensions**:
 
+As we start to add more dimensions the basic logic is the same, but the syntax gets hard to read as there can be an overwhelming number of brackets.
+
+Review this example of a simple 3D array:
+
 ```py
 my_array = np.array([[[12, 18, 25, 20],
                  [15, 22, 30, 28]],
                  [[10, 14, 19, 16],
                  [11, 21, 13, 14]]])
 
-print(my_array)
 print(my_array[1,1,3])
+```
+
+>Notice we need to provide 3x axis values to retrieve a single element
+
+To understand the 3D-array above:
+
+- First we have the standard parenthisis `()` for the `np.array` function, like we find with all Python functions that we call
+- Next, think back of a simple 1D-array: `[2,1,3,4]`. When we create a 2D array it is simply 2x 1D arrays separated by a comma, and they're both contained within a new layer of square brackets, for example: `[[2,1,3,4],[3,2,5,2]]`
+- When we move to 3D it's basically the same thing; we have two individual 2D arrays, separated by a comma, and then both are enclosed in a new layer of square brackets: `[[[2,1,3,4],[3,2,5,2]],[[3,4,1,2],[2,6,3,5]]]`.
+
+Perhaps clearer with this diagram:
+
+```sh
+|-------------------------------------------|    <--- 3D array
+ |------------------|   |------------------|     <--- 2D arrays
+  |-------| |-------|   |-------| |-------|      <--- 1D arrays
+[[[2,1,3,4],[3,2,5,2]],[[3,4,1,2],[2,6,3,5]]]
 ```
 
 ### Slicing an Array
