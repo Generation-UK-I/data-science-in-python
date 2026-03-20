@@ -32,7 +32,7 @@ Here is a simply array: `[2, 1, 3]`, the values could be responses to a survey, 
 
 This array is a single `axis`, and dimensions refers to the number of axis, so this is a one-dimensional (1-D) array, of length 3.
 
-Below we create two 1-D arrays `a` & `b`, and each pair of values together.
+Below we create two 1-D arrays `a` & `b`, and print the sum of adding each pair of values together.
 
 ```python
 import numpy as np
