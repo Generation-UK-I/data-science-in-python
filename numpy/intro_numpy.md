@@ -102,6 +102,17 @@ print(my_array.shape)
 
 We can continue to add dimensions to our arrays, but this is where getting your head around it can be difficult.
 
+Here's an example of a 3D-array, but we'll come back to it later to make sense of all the brackets:
+
+```py
+my_array = np.array([[[12, 18, 25, 20],
+                 [15, 22, 30, 28]],
+                 [[10, 14, 19, 16],
+                 [11, 21, 13, 14]]])
+
+print(my_array[1,1,3])
+```
+
 A common analogy to understand multi-dimensions is to imagine storing papers in filing cabinets...
 
 - 1D: A stack (column) of papers
