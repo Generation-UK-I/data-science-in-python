@@ -28,7 +28,7 @@ Luckily we don't use that long term often, we simply say `array`, or `ndarray`; 
 
 Arrays are a little tricky at first, but once it clicks they're easy.
 
-Here is a simply array: `[2, 1, 3]`, the values could be coordinates in 3D space, or the number of pizzas 3 people ate last month. If these values were in a spreadsheet then they would be like the columns, and therefore the series of values represents a row.
+Here is a simply array: `[2, 1, 3]`, the values could be responses to a survey, or the number of pizzas 3 people ate last month. If these values were in a spreadsheet then they would be like the columns, and therefore the series of values represents a row.
 
 This array is a single `axis`, and dimensions refers to the number of axis, so this is a one-dimensional (1-D) array, of length 3.
 
