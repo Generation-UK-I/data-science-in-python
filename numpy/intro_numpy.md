@@ -170,12 +170,13 @@ print('2nd element on 1st row: ', my_array[0, 1])
 **Three Dimensions**:
 
 ```py
-my_array = np.array([[12, 18, 25, 20],
-                 [15, 22, 30, 28],
-                 [10, 14, 19, 16]])
+my_array = np.array([[[12, 18, 25, 20],
+                 [15, 22, 30, 28]],
+                 [[10, 14, 19, 16],
+                 [11, 21, 13, 14]]])
 
 print(my_array)
-print(my_array[2,2])
+print(my_array[1,1,3])
 ```
 
 ### Slicing an Array
