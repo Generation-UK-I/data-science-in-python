@@ -9,4 +9,3 @@ Find introductions to each of these libraries below:
 [Introduction to Numpy](/numpy/intro_numpy.md)  
 [Introduction to Pandas](/pandas/intro_pandas.md)  
 [Introduction to Matplotlib](/matplotlib/intro_matplotlib.md)
-# data-science-in-python

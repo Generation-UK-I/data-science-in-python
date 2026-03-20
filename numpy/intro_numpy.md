@@ -231,4 +231,4 @@ print(np.add(array_a,array_b))
 
 Apply your learning by trying some Numpy exercises
 
-[Numpy Exercised](numpy_exercises.md)
+[Numpy Exercises](numpy_exercises.md)
