@@ -182,7 +182,7 @@ print('2nd element on 1st row: ', my_array[0, 1])
 
 As we start to add more dimensions the basic logic is the same, but the syntax gets hard to read as there can be an overwhelming number of brackets.
 
-Review this example of a simple 3D array:
+Review this example of a simple 3D array which we saw earlier:
 
 ```py
 my_array = np.array([[[12, 18, 25, 20],
