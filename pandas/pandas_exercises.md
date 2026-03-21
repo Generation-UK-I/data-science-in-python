@@ -1,20 +1,159 @@
-Here’s a set of **engaging, realistic exercises** that require students to *choose* an appropriate visualisation based on the structure and meaning of the data. Each exercise includes a small DataFrame and a short prompt that forces learners to think: *“What plot best communicates this?”*  
+# Pandas Exercises
 
-They’re designed to fit neatly into a Pandas or Matplotlib lesson, and they scale well from beginner to intermediate.
+These exercises are designed to help you understand the key functionality of Pandas.
 
----
+## Working with Series
 
-# 🎯 **Exercise Set: Choosing the Right Visualisation**
+The following tasks require you to work with a single series.
 
-Below are **10 exercises**, each with a DataFrame and a question. Students must:
+### **1. Basic Arithmetic on a Series**
 
-1. Identify the most appropriate plot  
-2. Justify their choice  
-3. Produce the plot using Pandas/Matplotlib  
+```py
+import pandas as pd
 
----
+s = pd.Series([10, 20, 30, 40, 50])
+```
 
-## **1. Daily Temperatures (Trend Over Time)**
+Tasks:
+
+- Increase every value in the Series by 5.
+- Then calculate the Series multiplied by 2.
+
+### **2. Summary Statistics**
+
+```py
+s = pd.Series([3, 7, 2, 9, 4, 6, 8, 10, 9, 11, 4, 6, 10])
+```
+
+Tasks:
+
+- Find the:
+  - mean
+  - median
+  - minimum
+  - maximum
+
+### **3. Boolean Filtering**
+
+```py
+s = pd.Series([12, 5, 18, 7, 20, 3, 15, 9, 11, 13, 8, 2, 10])
+```
+
+Task:
+
+- Create a new Series containing only the values greater than 10.
+- Create a second Series containing only the values lower than 10.
+
+### **4. Value Counts (Categorical Data)**
+
+```py
+s = pd.Series(["red", "Yellow", "blue", "red", "pink", "green", "blue", "red", "Yellow", "red", "pink", "green"])
+```
+
+Task:
+
+- Count how many times each colour appears.
+
+### **5. Applying a Function**
+
+```py
+s = pd.Series([1, 4, 9, 16, 25])
+```
+
+Task:
+
+- Create a new Series containing the square roots of each value.
+
+## Working with DataFrames
+
+The following tasks require you to work with a DataFrame.
+
+### **1. Column Arithmetic**
+
+```py
+df = pd.DataFrame({
+    "price": [5, 10, 15, 20],
+    "quantity": [1, 2, 3, 4]
+})
+```
+
+Task:
+
+- Create a new column called `total_cost` equal to `price` x `quantity`.
+
+### **2. Row Filtering**
+
+```py
+df = pd.DataFrame({
+    "name": ["Alice", "Bob", "Charlie", "David"],
+    "age": [25, 30, 35, 40]
+})
+```
+
+Task:
+
+- Select only the rows where age is greater than 30.
+
+### **3. Basic Statistics on a DataFrame**
+
+```py
+df = pd.DataFrame({
+    "math": [70, 80, 90, 85],
+    "english": [65, 75, 70, 80]
+})
+```
+
+Task:
+
+- Calculate the mean score for each subject.
+- Calculate the average score per student.
+
+### **4. Normalising a Column**
+
+```py
+df = pd.DataFrame({
+    "math": [70, 80, 90, 85],
+    "english": [65, 75, 70, 80]
+})
+```
+
+Task:
+
+- Create a new column `value_normalised` where each value is divided by the maximum value in the column.
+
+### **5. Grouping and Aggregation**
+
+```py
+df = pd.DataFrame({
+    "math": [70, 80, 90, 85],
+    "english": [65, 75, 70, 80]
+})
+```
+
+Task:
+
+- Calculate the total points scored by each team.
+
+### **6. Sorting Data**
+
+```py
+df = pd.DataFrame({
+    "product": ["A", "B", "C", "D"],
+    "sales": [200, 150, 300, 100]
+})
+```
+
+Task:
+
+- Sort the DataFrame by sales in descending order.
+
+## Choosing the Right Visualisation
+
+Each exercise includes a small DataFrame and a question that can be answered by the data. Your objective is to choose an appropriate visualisation to answer the question, based on the structure and meaning of the data.
+
+### **1. Daily Temperatures**
+
+How does temperature change across the week?
 
 ```python
 import pandas as pd
@@ -25,13 +164,11 @@ df1 = pd.DataFrame({
 })
 ```
 
-**Task:**  
-Visualise how temperature changes across the week.  
-What plot best shows a trend over time?
+<details><summary>Hint:</summary>Trend Over Time</details>
 
----
+### **2. Fruit Sales**
 
-## **2. Fruit Sales (Categorical Comparison)**
+Which fruit sold the most?
 
 ```python
 df2 = pd.DataFrame({
@@ -40,13 +177,11 @@ df2 = pd.DataFrame({
 })
 ```
 
-**Task:**  
-Show which fruit sold the most.  
-Which plot makes category comparisons easiest?
+<details><summary>Hint:</summary>Categorical Comparison</details>
 
----
+### **3. Student Study Hours vs Test Score**
 
-## **3. Student Study Hours vs Test Score (Relationship)**
+Is there a correlation between hours studied and test score?
 
 ```python
 df3 = pd.DataFrame({
@@ -55,13 +190,11 @@ df3 = pd.DataFrame({
 })
 ```
 
-**Task:**  
-Visualise the relationship between hours studied and test score.  
-Which plot best shows correlation?
+<details><summary>Hint:</summary>Relationship</details>
 
----
+### **4. Distribution of Exam Scores**
 
-## **4. Distribution of Exam Scores (Spread)**
+How are exam scores distributed?  
 
 ```python
 df4 = pd.DataFrame({
@@ -69,13 +202,11 @@ df4 = pd.DataFrame({
 })
 ```
 
-**Task:**  
-Show how exam scores are distributed.  
-Which plot reveals clusters, skew, or gaps?
+<details><summary>Hint:</summary>Spread</details>
 
----
+### **5. Monthly Revenue for Two Products**
 
-## **5. Monthly Revenue for Two Products (Multiple Trends)**
+How do revenue trends for two products compare over time?
 
 ```python
 df5 = pd.DataFrame({
@@ -85,13 +216,11 @@ df5 = pd.DataFrame({
 })
 ```
 
-**Task:**  
-Compare revenue trends for two products over time.  
-Which plot shows two lines clearly?
+<details><summary>Hint:</summary>Multiple Trends</details>
 
----
+### **6. Budget Breakdown**
 
-## **6. Budget Breakdown (Proportions)**
+How is the monthly budget divided across categories?
 
 ```python
 df6 = pd.DataFrame({
@@ -100,13 +229,11 @@ df6 = pd.DataFrame({
 })
 ```
 
-**Task:**  
-Show how a monthly budget is divided across categories.  
-Which plot best shows proportions of a whole?
+<details><summary>Hint:</summary>Proportions</details>
 
----
+### **7. Class Scores by Group**
 
-## **7. Class Scores by Group (Distribution Comparison)**
+How do the score distributions compare between Class A and Class B?
 
 ```python
 df7 = pd.DataFrame({
@@ -115,13 +242,11 @@ df7 = pd.DataFrame({
 })
 ```
 
-**Task:**  
-Compare the score distributions between Class A and Class B.  
-Which plot highlights medians and outliers?
+<details><summary>Hint:</summary>Distribution comparison, including medians and outliers</details>
 
----
+### **8. Website Traffic Sources**
 
-## **8. Website Traffic Sources (Categorical Proportions)**
+Which traffic sources contribute most to total visits?
 
 ```python
 df8 = pd.DataFrame({
@@ -130,13 +255,11 @@ df8 = pd.DataFrame({
 })
 ```
 
-**Task:**  
-Show which traffic sources contribute most to total visits.  
-Which plot communicates proportions clearly?
+<details><summary>Hint:</summary>Categorical Proportions</details>
 
----
+### **9. Sales by Quarter and Product**
 
-## **9. Sales by Quarter and Product (Grouped Categories)**
+How do product sales compare across quarters?
 
 ```python
 df9 = pd.DataFrame({
@@ -146,13 +269,11 @@ df9 = pd.DataFrame({
 })
 ```
 
-**Task:**  
-Compare product sales across quarters.  
-Which plot shows grouped categories effectively?
+<details><summary>Hint:</summary>Grouped Categories</details>
 
----
+### **10. Height vs Weight**
 
-## **10. Height vs Weight (Scatter With Trend)**
+Is there a relationship between height and weight?
 
 ```python
 df10 = pd.DataFrame({
@@ -161,19 +282,4 @@ df10 = pd.DataFrame({
 })
 ```
 
-**Task:**  
-Show the relationship between height and weight.  
-Which plot best visualises a linear relationship?
-
----
-
-# 🌟 Want to turn these into a worksheet or Jupyter Notebook?
-
-I can format them into:
-
-- A printable worksheet  
-- A Jupyter Notebook with starter code  
-- A version with hints and solutions  
-- A version with extension challenges (e.g., styling, subplots, annotations)
-
-Just tell me what format you want.
+<details><summary>Hint:</summary>Scatter With Trend</details>
