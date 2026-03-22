@@ -364,6 +364,17 @@ df_pie = pd.DataFrame({
 df_pie.set_index("category")["amount"].plot(kind="pie")
 ```
 
+## Plot Types Summary
+
+|Goal|Best Plot|
+|---|---|
+|Show a trend|Line plot|
+|Compare categories|Bar chart|
+|Show distribution|Histogram|
+|Show relationship|Scatter plot|
+|Compare multiple trends|Multi‑line plot|
+|Compare distributions|Box plot|
+
 ---
 
 >TODO: CSV section

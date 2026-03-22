@@ -52,7 +52,9 @@ Matplotlib graphs your data on Figures which are made of several parts:
 
 Think of the Figure as a blank canvas or a piece of paper. It's the top-level container that holds everything.
 
-## Creating a Plot
+## Creating Plots
+
+### Line Plots
 
 Line plots show trends over time.
 
@@ -69,7 +71,7 @@ plt.show()
 - `show()`: renders it 
 - The default x-axis is the `index` position
 
-### Adding Labels and Title
+#### Adding Labels and Title
 
 A chart without labels is almost useless.
 
@@ -80,3 +82,81 @@ plt.xlabel("Time")
 plt.ylabel("CPU %")
 plt.show()
 ```
+
+#### Customising Style
+
+Basic styling makes plots readable, markers show data points, and line styles improve clarity.
+
+```py
+plt.plot(cpu_usage, marker="o", linestyle="--")
+```
+
+#### Multiple Lines on One Plot
+
+You can define multiple plots as part of the same figure; ensure you include a Legend to identify datasets.
+
+```py
+cpu = [40, 55, 70, 65]
+memory = [60, 65, 75, 85]
+
+plt.plot(cpu, label="CPU")
+plt.plot(memory, label="Memory")
+
+plt.legend()
+plt.show()
+```
+
+### Bar Charts
+
+Bar charts compare categories.
+
+```py
+servers = ["A", "B", "C"]
+cpu = [65, 80, 55]
+
+plt.bar(servers, cpu)
+plt.show()
+```
+
+### Histograms
+
+Histogram shows frequency distribution
+
+```py
+response_times = [0.5, 0.7, 0.6, 1.2, 1.5, 0.9]
+
+plt.hist(response_times)
+plt.show()
+```
+
+### Scatter Plots
+
+Shows correlation between variables.
+
+```py
+cpu = [40, 50, 60, 70]
+response = [0.5, 0.6, 0.9, 1.4]
+
+plt.scatter(cpu, response)
+plt.show()
+```
+
+## Plot Types Summary
+
+|Goal|Best Plot|
+|---|---|
+|Show a trend|Line plot|
+|Compare categories|Bar chart|
+|Show distribution|Histogram|
+|Show relationship|Scatter plot|
+|Compare multiple trends|Multi‑line plot|
+|Compare distributions|Box plot|
+
+## Saving Plots
+
+Simple, but important
+
+```py
+plt.savefig("cpu_plot.png")
+```
+
