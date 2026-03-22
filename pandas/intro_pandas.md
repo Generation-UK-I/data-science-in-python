@@ -5,7 +5,7 @@ Pandas is one of the most popular data science libraries for Python, it is parti
 - Series: A column of data
 - DataFrame: A table of data (columns and rows)
 
-Numpy is for working with fast numerical arrays; Pandas is for working with labelled data tables, a Pandas DataFrame is similar to an Excel spreadsheet.
+Pandas is for working with fast numerical arrays; Pandas is for working with labelled data tables, a Pandas DataFrame is similar to an Excel spreadsheet.
 
 In addition to tabular data, Pandas is commonly used for:
 
@@ -32,7 +32,7 @@ import pandas as pd
 
 ### Creating a Series
 
-A series is a column of data with a labelled index, it's similar to a 1D-array. 
+A series is a column of data with a labelled index, it's similar to a 1D-array.
 
 ```py
 import pandas as pd
@@ -221,7 +221,13 @@ There are also functions for reshaping DFs, joining them like SQL tables, cleani
 
 ## Pandas Visualisation
 
-Pandas can generate a wide variety of visualisations, however bare in mind that different chart types may depend upon different types of DataFrames
+Pandas can generate a wide variety of visualisations, however bare in mind that different chart types may depend upon different types of DataFrames.
+
+The structure of the `plot` function is as follows:
+
+`df_line.plot(x="[series_1]", y="[series_2]", kind="[Chart_type]")`
+
+---
 
 ### Line Plot
 
@@ -235,6 +241,8 @@ df_line = pd.DataFrame({
 
 df_line.plot(x="day", y="temperature", kind="line")
 ```
+
+---
 
 ### Multiple Line Plot
 
@@ -250,6 +258,8 @@ df_multi_line = pd.DataFrame({
 df_multi_line.plot(x="month", y=["product_A", "product_B"], kind="line")
 ```
 
+---
+
 ### Bar Chart
 
 To compare quantities across categories.
@@ -263,6 +273,8 @@ df_hbar = pd.DataFrame({
 df_hbar.plot(x="country", y="population_millions", kind="barh")
 ```
 
+---
+
 ### Horizontal Bar Chart
 
 When category labels are long or numerous
@@ -275,6 +287,8 @@ df_hbar = pd.DataFrame({
 
 df_hbar.plot(x="day", y="temperature", kind="barh")
 ```
+
+---
 
 ### Grouped Bar Plot
 
@@ -290,6 +304,8 @@ df_grouped = pd.DataFrame({
 df_grouped.pivot(index="quarter", columns="product", values="sales").plot(kind="bar")
 ```
 
+---
+
 ### Scatter Plot
 
 To show correlation or patterns between two variables.
@@ -302,6 +318,8 @@ df_scatter = pd.DataFrame({
 
 df_scatter.plot(x="hours_studied", y="test_score", kind="scatter")
 ```
+
+---
 
 ### Histogram
 
@@ -316,6 +334,8 @@ df_box = pd.DataFrame({
 df_box.boxplot(by="class", column="score")
 ```
 
+---
+
 ### Box Plot
 
 To compare distributions across categories.
@@ -328,6 +348,8 @@ df_box = pd.DataFrame({
 
 df_box.boxplot(by="class", column="score")
 ```
+
+---
 
 ### Pie Chart
 
@@ -342,3 +364,10 @@ df_pie = pd.DataFrame({
 df_pie.set_index("category")["amount"].plot(kind="pie")
 ```
 
+---
+
+>TODO: CSV section
+
+Practice your knowledge by trying the tasks linked below.
+
+[Pandas Exercises](pandas_exercises.md)
