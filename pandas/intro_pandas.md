@@ -326,12 +326,11 @@ df_scatter.plot(x="hours_studied", y="test_score", kind="scatter")
 To show how values are distributed
 
 ```py
-df_box = pd.DataFrame({
-    "class": ["A", "A", "A", "B", "B", "B"],
-    "score": [70, 75, 80, 65, 68, 72]
+df_hist = pd.DataFrame({
+    "scores": [55, 60, 62, 65, 70, 72, 75, 80, 85, 90]
 })
 
-df_box.boxplot(by="class", column="score")
+df_hist["scores"].plot(kind="hist", bins=5)
 ```
 
 ---
@@ -378,6 +377,8 @@ df_pie.set_index("category")["amount"].plot(kind="pie")
 ---
 
 >TODO: CSV section
+
+## Pandas Exercises
 
 Practice your knowledge by trying the tasks linked below.
 

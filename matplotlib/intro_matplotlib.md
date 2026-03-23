@@ -85,10 +85,10 @@ plt.show()
 
 #### Customising Style
 
-Basic styling makes plots readable, markers show data points, and line styles improve clarity.
+Basic styling makes plots readable, markers show data points, and line styles improve clarity. Common customisations include `marker`, `linestyle`, `linewidth`, and `color`.
 
 ```py
-plt.plot(cpu_usage, marker="o", linestyle="--")
+plt.plot(cpu_usage, marker="o", linestyle="--", linewidth=2)
 ```
 
 #### Multiple Lines on One Plot
@@ -159,4 +159,10 @@ Simple, but important
 ```py
 plt.savefig("cpu_plot.png")
 ```
+
+## Matplotlib Exercises
+
+Practice your knowledge by trying the tasks linked below.
+
+[Matplotlib Exercises](matplotlib_exercises.md)
 
