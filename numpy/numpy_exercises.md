@@ -22,6 +22,7 @@ A sensor is mis-calibrated and every temperature reading is 2 degrees too low.
 >[18.5, 19.0, 20.2, 21.1, 19.8]
 
 Objectives:
+
 - Store the values in a NumPy array
 - Correct the readings using vectorised addition
 - Print the corrected temperatures

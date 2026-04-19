@@ -1,12 +1,24 @@
 # Introduction to Data Science in Python
 
-These guides is intended to follow on from the Introduction to Python course, and acts as an accompaniment for learners pursuing a data-science program; it is also an optional component for people on other programs looking to extend their skills.
+These guides are provided for learners on [Generation UK & I](https://uk.generation.org/) learners on Data Analysis and Data Engineering bootcamps; It also acts as an extension resource for anyone looking to extend their training on other programs.
+
+## Data Visualisation
+
+These resources cover the theory of data visualisation, and guide you through the deployment of an Anaconda (Miniconda) Jupyter Notebook environment.
+
+Data visualization is the graphical representation of information and data. By using visual elements like charts, graphs, and maps, it provides an accessible way to see and understand trends, outliers, and patterns in data.
+
+- [Introduction to data visualisation](./Data-visualisations.md)
+- [Deploying Miniconda and Jupyter Notebooks](./deploying-jupyter.md)
+- [Jupyter Tutorial](./jupyter-tutorial.md)
+
+## Python Data Science Packages
 
 Three core tools used by almost all data scientists are `numpy`, `pandas`, and `matplotlib`.
 
 These tools are closely related and integrate seamlessly, however each has specific functions and can be used individually.
 
-## NumPy
+### NumPy
 
 NumPy is the Foundation, and provides fast numerical computing capabilities. It provides:
 
@@ -16,7 +28,7 @@ NumPy is the Foundation, and provides fast numerical computing capabilities. It 
 
 Almost everything in scientific Python depends on NumPy because it replaces slow Python loops with fast C‑based operations.
 
-## Pandas
+### Pandas
 
 Pandas uses NumPy internally; Every Pandas Series is essentially a NumPy array with labels; Every DataFrame column is built on top of NumPy arrays.
 
@@ -24,8 +36,8 @@ So NumPy is the engine that powers Pandas’ performance.
 
 When using Pandas we work with:
 
-- Series (labelled 1D data)
-- DataFrames (labelled 2D tables)
+- `Series` (labelled 1D data)
+- `DataFrames` (labelled 2D tables)
 
 Pandas includes tools for:
 
@@ -34,9 +46,9 @@ Pandas includes tools for:
 - filtering and grouping
 - summarising and aggregating
 
-## Matplotlib
+### Matplotlib
 
-Matplotlib is the visualisation layer that draws:
+Matplotlib is the visualisation layer that draws `plots`, which can be:
 
 - line charts
 - bar charts
@@ -45,7 +57,7 @@ Matplotlib is the visualisation layer that draws:
 - box plots
 - and much more
 
-## A Simple Analogy
+### A Simple Analogy
 Imagine you’re cooking a meal:
 
 - NumPy is your raw ingredients (fast, basic building blocks)
