@@ -1,6 +1,6 @@
 # Introduction to Data Science in Python
 
-These guides are provided for learners on [Generation UK & I](https://uk.generation.org/) learners on Data Analysis and Data Engineering bootcamps; It also acts as an extension resource for anyone looking to extend their training on other programs.
+These guides are provided for learners on [Generation UK & I](https://uk.generation.org/) Data Analysis and Data Engineering bootcamps; It also acts as an extension resource for anyone looking to extend their training on other programs.
 
 ## Data Visualisation
 
