@@ -4,9 +4,11 @@ NumPy is the foundation of **data-science** in Python.
 
 Whereas Python works with `lists`, NumPy introduces the `ndarray` (N-dimensional array), which are faster and more efficient for large datasets. Unlike Python lists, in an array each item must be of the same type (homogenous), such as integers or floats.
 
-Some operations are handled differently or automatically by Numpy, for example you can add two arrays as if they were single values (a + b), and Numpy will automatically apply the operation to every element simultaneously; to do this in standard Python you might need to implement a loop. This is known as `vectorised` operation.
+Some operations are handled differently or automatically by Numpy, for example you can add two arrays as if they were single values (a + b), and NumPy will automatically apply the operation to every element simultaneously; to do this in standard Python you might need to implement a loop. This is known as `vectorised` operation.
 
-## Installing Numpy
+## Installing NumPy
+
+>If you have deployed the `Anaconda/Jupyter` environment in `Docker` you may skip this step, numpy, pandas, and matplotlib are installed automatically via the requirements.txt file.
 
 Numpy is not included in the Standard Python Library, but it can be installed using `pip`.
 

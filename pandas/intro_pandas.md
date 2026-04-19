@@ -18,6 +18,8 @@ In addition to tabular data, Pandas is commonly used for:
 
 ## Installing Pandas
 
+>If you have deployed the `Anaconda/Jupyter` environment in `Docker` you may skip this step, numpy, pandas, and matplotlib are installed automatically via the requirements.txt file.
+
 Pandas is not included in the Standard Python Library, but it can be installed using `pip`.
 
 >**Optional**: Create a virtual environment with `python -m venv ./venv` then activate it with `.venv\Scripts\activate.ps1`
