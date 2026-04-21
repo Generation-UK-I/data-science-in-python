@@ -8,7 +8,7 @@ When you first log into Jupyter you'll see the front page with any notebooks you
 
 >`ipykernel`: A package providing a computational backend for your notebooks.
 
-![](./img/jupyter-frontpage.jpg)
+![jup-frontpage](./img/jupyter-frontpage.jpg)
 
 The key object we use to add text and code to our notebooks is the cell, into which we can write code, markdown (formatted text), or RAW text.
 
@@ -33,11 +33,11 @@ MD allows you to create complex, richly formatted, accessible documents by utili
 
 Here you can see some RAW markdown entered into a cell:
 
-![](./img/md-cell.jpg)
+![md-cell](./img/md-cell.jpg)
 
 If you execute the cell (`PLAY` button, or `SHIFT+CTRL`) it renders the MD as seen here:
 
-![](./img/rendered-md-cell.jpg)
+![rendered-md-cell](./img/rendered-md-cell.jpg)
 
 Use this [markdown cheat sheet](https://www.markdownguide.org/cheat-sheet/) to look up the syntax for the formatting features you require
 
@@ -47,13 +47,13 @@ One useful feature of markdown is it's ability to display and format code correc
 
 To create a code block you surround your code with three backticks **```** before it, and three after (*on most keyboards this is to the left of the number 1*), be careful, it looks like an apostrophe.
 
-![](./img/md-code-block.jpg)
+![jup-md-code-block](./img/md-code-block.jpg)
 
 After the three opening backticks you can state the language you're using for correct formatting; Most common ones are supported, but for our purposes you'll likely use `bash`, `py`, and `text`.
 
 When executed in Jupyter it looks like this (you've seen many examples of how it looks in VSC):
 
-![](./img/md-code-block-rendered.jpg)
+![jup-rendered-code-block](./img/md-code-block-rendered.jpg)
 
 The last useful bit of syntax is to `highlight` a single piece of `code` or a `keyword` inline with your text, this is done by surrounding the code/word(s) with a single backtick (`).
 
@@ -63,7 +63,7 @@ The last useful bit of syntax is to `highlight` a single piece of `code` or a `k
 
 With Jupyter you can write code directly into cells, and execute them in place, inline with your markdown cells.
 
-![](./img/jup-hello-world.jpg)
+![jup-hello-world](./img/jup-hello-world.jpg)
 
 ### Useful Jupyter Shortcuts
 
@@ -96,7 +96,7 @@ Don't worry about memorising them, the ones you use most often will become secon
 
 Code cells will accept and run your Python code just like any other environment, any output or input will be provided immediately below the cell.
 
-![](./img/code-cells.jpg)
+![jup-code-cells](./img/code-cells.jpg)
 
 >We don't get the hints and suggestions like VSC, so a little extra attention to detail is required; This is one advantage of using Jupyter Notebooks through VSC.
 
@@ -113,7 +113,7 @@ The following lab will familiarise yourself with Jupyter Notebooks, you will use
 3. Type the following:
 
 ```markdown
-## My First Analysis
+# My First Notebook
 
 This notebook explores basic Python, NumPy, Pandas, and Matplotlib.
 
@@ -162,9 +162,9 @@ df = pd.DataFrame(data)
 print(df)
 ```
 
-8. Change the next cell to markdown, and add: `Here is my first plot with Matplotlib`, then execute.
+10. Change the next cell to markdown, and add: `Here is my first plot with Matplotlib`, then execute.
 
-9. Ensure the next cell is code, enter the following, and execute:
+11. Ensure the next cell is code, enter the following, and execute:
 
 ```py
 import matplotlib.pyplot as plt
@@ -179,9 +179,9 @@ plt.ylabel("Score")
 plt.show()
 ```
 
-8. Change the next cell to markdown, and add: `Here is my first Pandas and Matplotlib are both based on NumPy, so the next example uses all three`, then execute.
+12. Change the next cell to markdown, and add: `Pandas and Matplotlib are both based on NumPy, so the next example uses all three`, then execute.
 
-9. Ensure the next cell is code, enter the following, and execute:
+13. Ensure the next cell is code, enter the following, and execute:
 
 ```py
 import pandas as pd
@@ -203,7 +203,71 @@ plt.show()
 
 Copy the code above into a new cell, think of some other data which could be compared using a bar graph, and replace the arrays with your new data.
 
----
+## Jupyter Magics
+
+Magic commands/functions are special commands which can be interpreted by the IPython kernel to provide extra features and functionality, such as debugging, shell access, access to external files, and much more, which can be called from within your notebook.
+
+There are two types of Magics:
+
+### Line magics (`%` - affects one line)
+
+Some common line magic commands include:
+
+```python
+%who                              # List variables
+%reset                            # Clear all variables
+%run script.py                    # Run external Python file
+%load script.py                   # Load script into cell
+%pwd                              # Print working directory
+%cd /path/to/dir                  # Change directory
+%ls                               # List files
+```
+
+### Cell magics (`%%` - affects entire cell)
+
+Try the following Cell magics:
+
+```python
+%%time
+# Time entire cell
+total = 0
+for i in range(1000000):
+    total += i
+print(total)
+
+%%writefile my_script.py
+# Save cell content to file
+print("Hello from file!")
+
+%%bash
+# Run bash commands
+echo "Current date:"
+date
+ls -la
+
+%%html
+# Render HTML
+<h1>Big Title</h1>
+<div style="color:red">Red text</div>
+```
+
+## Some Jupyter Do's and Don'ts
+
+**Do**:
+
+- Use markdown cells to document your thought process
+- Add section headings to organize long notebooks
+- Use meaningful variable names
+- Clear output before committing to version control
+- Restart kernel and run all before sharing
+- Use comments in code cells
+
+**Don't**:
+
+- Leave large outputs (DataFrames with 1000s of rows)
+- Hardcode file paths (use relative paths)
+- Run all cells without understanding the flow
+- Share notebooks with API keys/passwords
 
 ## Explore Python Data-Science Packages
 
