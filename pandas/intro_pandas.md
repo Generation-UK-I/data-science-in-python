@@ -385,4 +385,5 @@ df_pie.set_index("category")["amount"].plot(kind="pie")
 Practice your knowledge by trying the tasks linked below.
 
 - [Pandas Exercises](pandas_exercises.md)
+- [Pandas Solutions](./pandas_solutions.md.md)
 - [Pandas Quick Tips](./pandas_quick_tips.md)

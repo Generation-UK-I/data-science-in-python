@@ -166,5 +166,6 @@ plt.savefig("cpu_plot.png")
 
 Practice your knowledge by trying the tasks linked below.
 
-- [Matplotlib Exercises](matplotlib_exercises.md)
+- [Matplotlib Exercises](./matplotlib_exercises.md)
+- [Matplotlib Solutions](./matplotlib_solutions.md)
 - [Matplotlib Quick Tips](./matplotlib_quick_tips.md)
